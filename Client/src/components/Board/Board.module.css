@@ -1,0 +1,29 @@
+.Board{
+    width: 40.4%;
+    height: 97%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.Board:hover{
+    box-shadow: 0 0 15px 8px black;
+}
+@keyframes scaleBlock{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+  
+.Block{
+    width: 151px;
+    height: 151px;
+    display: flex;
+    flex-wrap: wrap;
+    animation: scaleBlock 0.4s ease-in-out;
+}

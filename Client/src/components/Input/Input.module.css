@@ -1,0 +1,21 @@
+.Input{
+    outline: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1.4em;
+    background-color: #616161;
+    color: gainsboro;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 2px;
+    margin: 0;
+    border: 1px solid #101010;
+}
+
+.Input:hover{
+    background-color: #888787;
+}
+.Input:focus{
+    background-color: #888787;
+}
+  

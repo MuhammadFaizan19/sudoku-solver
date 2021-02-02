@@ -1,0 +1,37 @@
+.SolBoard{
+    width: 40.4%;
+    height: 97%;
+    display: flex;
+    flex-wrap: wrap;
+    animation: solved 0.3s linear 1;
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.SolBoard:hover{
+    box-shadow: 0 0 15px 8px black;
+}
+@keyframes solved{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.SolBlock{
+    width: 151px;
+    height: 151px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.SolBlock input{
+    background-color:#73695a;
+    color: darkkhaki;
+    font-weight: 400;
+}
+.SolBlock input:hover{
+    background-color: #807564;
+}
+.SolBlock input:focus{
+    background-color: #807564;
+}

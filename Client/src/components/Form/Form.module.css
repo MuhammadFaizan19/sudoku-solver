@@ -1,0 +1,56 @@
+.hide{
+    height: 0;
+    width: 0;
+  }
+  
+  .form{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+    width: 250px;
+    background-color: #373737;
+    border-radius: 10px;
+    text-align: center;
+    transition: box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .form:hover{
+    box-shadow: 0 0 10px 5px black;
+  }
+  .form p{
+      font-size: 1.1em;
+  }
+  .form label{
+      color: #cccccc;
+  }
+  
+  .Upload input{
+    height: 0;
+    width: 0;
+    opacity: 0;
+  } 
+  
+  .Upload span{
+    font-size: 25px;
+    margin-bottom: 5px;
+    margin-right: 1px;
+  }
+  
+  .Upload{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid coral;
+    border-radius: 50%;
+    margin: 10px auto;
+    line-height: 30px;
+    padding: 10px;
+  }
+  .Upload:hover{
+    background: content-box;
+    color: orangered;
+    border: 2px solid orangered;
+  }
