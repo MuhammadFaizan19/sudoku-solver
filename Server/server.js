@@ -8,11 +8,11 @@ const database = require('./Database/database');
 const app = express()
 
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
 });
 
 
@@ -26,11 +26,15 @@ app.use(session({
   secret: 'uwotm8'
 }))
 app.use(bodyParser.json());
-app.use('/project/uploads',express.static('./project/uploads'));
+app.use('/project/uploads', express.static('./project/uploads'));
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/api/images', routes);
 
+app.use(express.static((__dirname, 'build')))
 
+app.get('/*', (req, res) => {
+  res.sendFile(__dirname + '/build/index.html')
+})
 
 const server = http.createServer(app)
 server.listen(app.get('port'), function () {
